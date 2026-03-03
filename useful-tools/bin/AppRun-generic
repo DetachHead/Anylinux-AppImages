@@ -71,6 +71,8 @@ else
 	TO_LAUNCH="$APPDIR"/bin/"$MAIN_BIN"
 fi
 
+export LD_LIBRARY_PATH="$APPDIR/lib:$LD_LIBRARY_PATH"
+
 # If LD_DEBUG=libs is set outside the AppImage the output is not helpful
 # because it will include the libs of sh, grep, cat, etc from the hooks
 # with this var we can set LD_DEBUG=libs for the bundled application only
